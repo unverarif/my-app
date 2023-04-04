@@ -29,7 +29,7 @@ const Panini = () => {
     <div className='bg-gray-100'>
         <Navbar />
         <div className='container mx-auto '>
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
                 <div>
                     <img src={panini} alt="" className='max-w-[500px] max-h-[500px] mx-auto'/>
                     {/* <iframe class="w-full aspect-video loop" src={paninimp4}></iframe> */}
@@ -45,8 +45,9 @@ const Panini = () => {
                     </p>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-8 py-8'>
-                <div className="block max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
+            <div className=''>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 justify-center'>
+                <div className=" max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
                     <div className='flex items-center justify-start gap-x-8 pb-4'>
                         <img src={links} alt="" className='h-16 w-16'/>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Dubleks Tarama</h5>
@@ -55,7 +56,7 @@ const Panini = () => {
                 </div>
 
 
-                <div className="block max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
+                <div className=" max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
                     <div className='flex items-center justify-start gap-x-8 pb-4'>
                         <img src={qr} alt="" className='h-16 w-16'/>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Karekod Okuma</h5>
@@ -66,7 +67,7 @@ const Panini = () => {
                 </div>
 
 
-                <div className="block max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
+                <div className=" max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
                     <div className='flex items-center justify-start gap-x-8 pb-4'>
                         <img src={sort} alt="" className='h-16 w-16'/>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">MICR Best</h5>
@@ -75,7 +76,7 @@ const Panini = () => {
                 </div>
 
 
-                <div className="block max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
+                <div className=" max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
                     <div className='flex items-center justify-start gap-x-8 pb-4'>
                         <img src={compress} alt="" className='h-16 w-16'/>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">	
@@ -83,7 +84,7 @@ const Panini = () => {
                     </div>
                     <p className="font-normal text-gray-900 ">45 cm.’e kadar olan alonjlu çekleri problemsiz olarak tarayıp imajlarını yüksek kalitede kaydeder.</p>
                 </div>
-                <div className="block max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
+                <div className=" max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
                     <div className='flex items-center justify-start gap-x-8 pb-4'>
                         <img src={magic} alt="" className='h-16 w-16'/>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">	
@@ -91,7 +92,7 @@ const Panini = () => {
                     </div>
                     <p className="font-normal text-gray-900 ">Eğer dakikada 50 çek tarama hızına sahip bir MyVisionX çek tarayıcınız var ise cihazı değiştirmeden 100 lük hıza upgrade edebilirsiniz.</p>
                 </div>
-                <div className="block max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
+                <div className=" max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
                     <div className='flex items-center justify-start gap-x-8 pb-4'>
                         <img src={check} alt="" className='h-16 w-16'/>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">	
@@ -99,6 +100,7 @@ const Panini = () => {
                     </div>
                     <p className="font-normal text-gray-900 ">Türkiye’de kullanılan yerli yabancı tüm ERP sistemleri ile entegre olabilir.</p>
                 </div>
+            </div>
             </div>
         </div>
 

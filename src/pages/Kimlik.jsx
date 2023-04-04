@@ -20,7 +20,7 @@ const Kimlik = () => {
     <div className='bg-gray-100'>
         <Navbar />
         <div className='container mx-auto '>
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
                 <div>
                     <img src={idscanner} alt="" className='w-[500px] max-h-[500px] mx-auto'/>
                     {/* <iframe class="w-full aspect-video loop" src={paninimp4}></iframe> */}
@@ -35,7 +35,7 @@ const Kimlik = () => {
                     </p>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-8 py-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8'>
                 
                 <div className="block max-w-sm p-6 bg-white rounded-lg shadow-xl hover:bg-gray-100">
                     <div className='flex items-center justify-start gap-x-8 pb-4'>

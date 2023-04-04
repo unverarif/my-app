@@ -17,7 +17,7 @@ export const Cards = () => {
           Isınma ve bekleme süresi olmadan tam 1 sn. içerisinde tarama işlemini gerçekleştirerek işletmenize büyük bir hız kazandırmaktadır.
           Plustek Türkiye Distribütörü olarak tüm ürünlerin satış ve sonrası desteği Eraysoft tarafından sağlanır.
           </p>
-          <NavLink to={"/my-app/idscanner"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex mx-auto justify-start'>Detaylı Bilgi</button></NavLink>
+          <NavLink to={"/my-app/idscanner"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex justify-start'>Detaylı Bilgi</button></NavLink>
         </div>
       </div>
       <div className='grid grid-cols-2 container mt-12 mx-auto max-h-[400px] rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
@@ -30,7 +30,7 @@ export const Cards = () => {
           Kompakt yapısı ile masanızda minimum alanı işgal etmektedir.
           Eski veya yeni kimlik, eski veya yeni ehliyet olarak tüm dokümanları tarayabilirsiniz.
           </p>
-          <NavLink to={"/my-app/idscanner"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex mx-auto justify-start'>Detaylı Bilgi</button></NavLink>
+          <NavLink to={"/my-app/idscanner"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex justify-start'>Detaylı Bilgi</button></NavLink>
         </div>
       </div>
       <div className='grid grid-cols-2 container mt-12 mx-auto max-h-[400px] rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
@@ -42,7 +42,7 @@ export const Cards = () => {
           300 DPI renkli tarama esnasında tarama hızı hiçbir şekilde düşmez. Çek Tarayıcı kaliteli üretimi ile uzun yıllar işletmelerin ihtiyaçlarını gidermektedir.
           Merkez Bankasının belirlediği dijital takas teknik verilerini tam olarak karşılamaktadır.
           </p>
-          <NavLink to={"/my-app/panini"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex mx-auto justify-start'>Detaylı Bilgi</button></NavLink>
+          <NavLink to={"/my-app/panini"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex justify-start'>Detaylı Bilgi</button></NavLink>
         </div>
       </div>
 
