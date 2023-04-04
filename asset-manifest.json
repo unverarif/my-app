@@ -1,15 +1,33 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.a126e7bb.css",
-    "main.js": "/my-app/static/js/main.1cfb90c6.js",
+    "main.css": "/my-app/static/css/main.2f7bb3c9.css",
+    "main.js": "/my-app/static/js/main.73a21c34.js",
     "static/js/787.28cb0dcd.chunk.js": "/my-app/static/js/787.28cb0dcd.chunk.js",
+    "static/media/passscanner.png": "/my-app/static/media/passscanner.37c26fbaf9cf4abf9206.png",
+    "static/media/cekscanner.png": "/my-app/static/media/cekscanner.7615fa740786fcba2d1c.png",
+    "static/media/sertifika.png": "/my-app/static/media/sertifika.10644fa270b9e4810fd9.png",
+    "static/media/nike.png": "/my-app/static/media/nike.87d31fb3271194b9fe47.png",
+    "static/media/volvo.png": "/my-app/static/media/volvo.44e8bed937a9b41cc3e0.png",
+    "static/media/ford.png": "/my-app/static/media/ford.37dc3cf262398bf2253c.png",
+    "static/media/citi.png": "/my-app/static/media/citi.ca35ba4b24e54dc581ca.png",
+    "static/media/idscanner.png": "/my-app/static/media/idscanner.c7098b3d7af770404d9d.png",
+    "static/media/roche.png": "/my-app/static/media/roche.37f4c59fbca53981fb11.png",
+    "static/media/isbank.png": "/my-app/static/media/isbank.88fca045072d0cb6c41d.png",
+    "static/media/magic.png": "/my-app/static/media/magic.6669c9aab4f34a747785.png",
+    "static/media/performance.png": "/my-app/static/media/performance.4af3dd7e05405b2c9244.png",
+    "static/media/settings.png": "/my-app/static/media/settings.5be38e003d8366e2e69f.png",
+    "static/media/secure.png": "/my-app/static/media/secure.4dc72a882111867046d7.png",
+    "static/media/puzzle.png": "/my-app/static/media/puzzle.77dccfb6c9902dc82b7e.png",
+    "static/media/favorite.png": "/my-app/static/media/favorite.f8d4e1a6d7e2b3a4db5b.png",
+    "static/media/qr.png": "/my-app/static/media/qr.967ab465e7c6d20e84ed.png",
+    "static/media/check.png": "/my-app/static/media/check.03c25dfa3af163187690.png",
     "index.html": "/my-app/index.html",
-    "main.a126e7bb.css.map": "/my-app/static/css/main.a126e7bb.css.map",
-    "main.1cfb90c6.js.map": "/my-app/static/js/main.1cfb90c6.js.map",
+    "main.2f7bb3c9.css.map": "/my-app/static/css/main.2f7bb3c9.css.map",
+    "main.73a21c34.js.map": "/my-app/static/js/main.73a21c34.js.map",
     "787.28cb0dcd.chunk.js.map": "/my-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a126e7bb.css",
-    "static/js/main.1cfb90c6.js"
+    "static/css/main.2f7bb3c9.css",
+    "static/js/main.73a21c34.js"
   ]
 }
