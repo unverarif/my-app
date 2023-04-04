@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 export const Cards = () => {
   return (
     <div className='bg-white'>
-      <div className='grid grid-cols-2 container mt-12 mx-auto max-h-[400px] rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
+      <div className='grid grid-cols-1 md:grid-cols-2 container mt-12 mx-auto h-full rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
         <img src={passscanner} alt="" className='py-8 justify-center object-cover max-h-[400px] justify-self-center'/>
         <div className='flex flex-col justify-between place-content-start'>
           <h1 className='m-4 text-black  text-3xl font-extrabold'>Pasaport Tarayıcı, Okuyucu</h1>
@@ -20,7 +20,7 @@ export const Cards = () => {
           <NavLink to={"/my-app/idscanner"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex justify-start'>Detaylı Bilgi</button></NavLink>
         </div>
       </div>
-      <div className='grid grid-cols-2 container mt-12 mx-auto max-h-[400px] rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
+      <div className='grid grid-cols-1 md:grid-cols-2 container mt-12 mx-auto h-full rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
         <img src={idscanner} alt="" className='py-8 justify-center object-cover max-h-[400px] justify-self-center'/>
         <div className='flex flex-col justify-between place-content-start'>
           <h1 className='m-4 text-black  text-3xl font-extrabold'>Kimlik Tarayıcı, Okuyucu</h1>
@@ -33,7 +33,7 @@ export const Cards = () => {
           <NavLink to={"/my-app/idscanner"}><button className='bg-black text-white m-4 p-4 px-8 rounded-lg hover:scale-105 duration-150 flex justify-start'>Detaylı Bilgi</button></NavLink>
         </div>
       </div>
-      <div className='grid grid-cols-2 container mt-12 mx-auto max-h-[400px] rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
+      <div className='grid grid-cols-1 md:grid-cols-2 container mt-12 mx-auto h-full rounded-xl bg-gray-100 hover:bg-gray-200 duration-200'>
         <img src={cekscanner} alt="" className='py-8 justify-center object-cover max-h-[400px] justify-self-center'/>
         <div className='flex flex-col justify-between place-content-start'>
           <h1 className='m-4 text-black  text-3xl font-extrabold'>Çek Tarayıcı, Okuyucu</h1>
