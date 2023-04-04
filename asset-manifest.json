@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.e122123e.css",
-    "main.js": "/my-app/static/js/main.258058f0.js",
+    "main.css": "/my-app/static/css/main.56c8adec.css",
+    "main.js": "/my-app/static/js/main.79c19cf3.js",
     "static/js/787.28cb0dcd.chunk.js": "/my-app/static/js/787.28cb0dcd.chunk.js",
     "static/media/passscanner.png": "/my-app/static/media/passscanner.37c26fbaf9cf4abf9206.png",
     "static/media/cekscanner.png": "/my-app/static/media/cekscanner.7615fa740786fcba2d1c.png",
@@ -22,12 +22,12 @@
     "static/media/qr.png": "/my-app/static/media/qr.967ab465e7c6d20e84ed.png",
     "static/media/check.png": "/my-app/static/media/check.03c25dfa3af163187690.png",
     "index.html": "/my-app/index.html",
-    "main.e122123e.css.map": "/my-app/static/css/main.e122123e.css.map",
-    "main.258058f0.js.map": "/my-app/static/js/main.258058f0.js.map",
+    "main.56c8adec.css.map": "/my-app/static/css/main.56c8adec.css.map",
+    "main.79c19cf3.js.map": "/my-app/static/js/main.79c19cf3.js.map",
     "787.28cb0dcd.chunk.js.map": "/my-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e122123e.css",
-    "static/js/main.258058f0.js"
+    "static/css/main.56c8adec.css",
+    "static/js/main.79c19cf3.js"
   ]
 }
