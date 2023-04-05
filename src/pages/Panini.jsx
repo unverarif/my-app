@@ -107,7 +107,8 @@ const Panini = () => {
         <CallUs />
 
 
-        <iframe src="https://www.youtube.com/embed/OylUlocw9Aw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className='mx-auto w-[1200px] h-[600px] my-8' title='video'></iframe>
+        <iframe src="https://www.youtube.com/embed/OylUlocw9Aw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className='mx-auto w-[450pxpx] h-[600px] my-8 md:container md:mx-auto md:mx-24' title='video'></iframe>
+
 
 
             <section class="bg-gray-100 py-20 lg:py-[120px]">
