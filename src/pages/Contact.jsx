@@ -1,58 +1,51 @@
-import React, { Fragment, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import Navbar from '../components/Navbar';
 import { Footerv2 } from '../components/Footerv2';
-import { Dialog, Transition } from '@headlessui/react'
 
 
 const Contact = () => {
-    
-    const form = useRef();
 
-        const sendEmail = (e) => {
+    const [email, setEmail] = useState('')
+    const [konu, setKonu] = useState('')
+    const [mesaj, setMesaj] = useState('')
+
+    const handleClick = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_0ei8bs3', 'template_oasxaay', form.current, 'LojQixuC5WFEnJy-t')
-            .then((result) => {
-            console.log(result.text);
-            console.log("message sent");
-            }, (error) => {
-            console.log(error.text);
-            });
-        };
+        const contactInfo = {email, konu, mesaj}
+        console.log(contactInfo)
+        fetch("http://localhost:8080/my-app/iletisim",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(contactInfo)
 
-        const [isOpen, setIsOpen] = useState(false);
+    }).then(()=>{
+        console.log("New Contact Added")
+    })
+    }
 
-        const handleClick = () => {
-        sendEmail();
-        openModal();
-        };
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     const data = { email, konu, mesaj };
+    //     axios.post('/my-app/iletisim', data); 
+    // }
+    
+    
 
-        const handleSubmit = (e) => {
-            sendEmail(e);
-            openModal();
-        };
-
-        function closeModal() {
-        setIsOpen(false);
-        }
-
-        function openModal() {
-        setIsOpen(true);
-        }
     // Emailjs ################ 
 
-//     const form = useRef();
-//  const sendEmail = (e) => {
-//     e.preventDefault();
+    // const form = useRef();
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
     
-//     emailjs.sendForm('service_0ei8bs3', 'template_oasxaay', form.current, 'LojQixuC5WFEnJy-t')
-//      .then((result) => {
-//          console.log(result.text);
-//           console.log("message sent");
-//      }, (error) => {
-//            console.log(error.text);
-//        });
-//       };
+    //     emailjs.sendForm('service_0ei8bs3', 'template_oasxaay', form.current, 'LojQixuC5WFEnJy-t')
+    //       .then((result) => {
+    //           console.log(result.text);
+    //           console.log("message sent");
+    //       }, (error) => {
+    //           console.log(error.text);
+    //       });
+    //     };
 
     // ######################
 
@@ -102,75 +95,63 @@ const Contact = () => {
                 <div class="py-8 lg:pt-16 px-4 mx-auto max-w-screen-md">
                     <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">İletişim Formu</h2>
                     <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Teknik destek ya da herhangi bir konu için bize danışabilirsin.</p>
-                    <form action="#" class="space-y-8" ref={form} onSubmit={handleSubmit}>
+                    <form action="#" class="space-y-8">
                         <div>
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email Adresi</label>
-                            <input type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="" required />
+                            <label
+                                for="email"
+                                htmlFor='email'
+                                class="block mb-2 text-sm font-medium text-gray-900 ">
+                                    Email Adresi
+                            </label>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                id="email" 
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" 
+                                placeholder="" 
+                                required 
+                                onChange={(e) => setEmail(e.target.value)} 
+                                value={email}/>
                         </div>
                         <div>
-                            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 ">Konu</label>
-                            <input type="text" name="subject" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="" required />
+                            <label 
+                                for="konu" 
+                                htmlFor='konu' 
+                                class="block mb-2 text-sm font-medium text-gray-900 ">
+                                    Konu
+                            </label>
+
+                            <input 
+                                type="text" 
+                                name="konu"
+                                id="konu" 
+                                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" 
+                                placeholder="" 
+                                required 
+                                onChange={(e) => setKonu(e.target.value)} 
+                                value={konu}/>
+
                         </div>
+
                         <div class="sm:col-span-2">
-                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Mesajınız</label>
-                            <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 " placeholder=""></textarea>
+                            
+                            <label for="mesaj" htmlFor='mesaj' class="block mb-2 text-sm font-medium text-gray-900 ">Mesajınız</label>
+                            <textarea 
+                                id="mesaj" 
+                                name="mesaj" 
+                                rows="6" 
+                                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 " 
+                                placeholder="" 
+                                onChange={(e) => setMesaj(e.target.value)} 
+                                value={mesaj}>
+                            </textarea>
+
                         </div>
-                        <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 bg-black" onClick={handleClick} value="Send">Gönder</button>
+                        <button 
+                        type="submit" 
+                        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 bg-black" 
+                        onClick={handleClick}>Gönder</button>
                     </form>
-                    <Transition appear show={isOpen} as={Fragment}>
-                        <Dialog as="div" className="relative z-10" onClose={closeModal}>
-                        <Transition.Child
-                            as={Fragment}
-                            enter="ease-out duration-300"
-                            enterFrom="opacity-0"
-                            enterTo="opacity-100"
-                            leave="ease-in duration-200"
-                            leaveFrom="opacity-100"
-                            leaveTo="opacity-0"
-                        >
-                            <div className="fixed inset-0 bg-black bg-opacity-25" />
-                        </Transition.Child>
-
-                        <div className="fixed inset-0 overflow-y-auto">
-                            <div className="flex min-h-full items-center justify-center p-4 text-center">
-                            <Transition.Child
-                                as={Fragment}
-                                enter="ease-out duration-300"
-                                enterFrom="opacity-0 scale-95"
-                                enterTo="opacity-100 scale-100"
-                                leave="ease-in duration-200"
-                                leaveFrom="opacity-100 scale-100"
-                                leaveTo="opacity-0 scale-95"
-                            >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                <Dialog.Title
-                                    as="h3"
-                                    className="text-lg font-medium leading-6 text-gray-900"
-                                >
-                                    Payment successful
-                                </Dialog.Title>
-                                <div className="mt-2">
-                                    <p className="text-sm text-gray-500">
-                                    Your payment has been successfully submitted. We’ve sent
-                                    you an email with all of the details of your order.
-                                    </p>
-                                </div>
-
-                                <div className="mt-4">
-                                    <button
-                                    type="button"
-                                    className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                                    onClick={closeModal}
-                                    >
-                                    Got it, thanks!
-                                    </button>
-                                </div>
-                                </Dialog.Panel>
-                            </Transition.Child>
-                            </div>
-                        </div>
-                        </Dialog>
-                    </Transition>
                 </div>
             </section>
         </div>
